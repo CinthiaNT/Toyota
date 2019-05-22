@@ -1,0 +1,197 @@
+body {
+    background-color: #fff6f6;
+}
+h1 {
+    text-align: center;
+    font-size: 30px;
+}
+h4 {
+    font-size: 16px;
+    font-weight: 700;
+}
+header {
+    padding: 10px 0 0 0;
+    background: #8f0202;
+    background: -moz-linear-gradient(left, #8f0202 0%, #e42626 100%);
+    background: -webkit-linear-gradient(left, #8f0202 0%, #e42626 100%);
+    background: linear-gradient(to rigth, #8f0202 0%, #e42626 100%);
+    text-align: center;
+}
+.contenido-hero{
+    text-align: center;
+    text-transform: uppercase;
+}
+.contenido-hero .texto{
+    margin-top: 20%;
+}
+.container .white{
+    margin-right: 10px
+}
+header .white{
+    color:white;
+}
+@media(min-width: 750px){
+    header {
+        text-align: left;
+    }
+}
+.borrar-curso {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+ul {
+    list-style: none;
+}
+#hero {
+    background-image: url(../images/fondopng.png);
+    height: 489px;
+}
+.prius{
+    background-image: url(../images/prius.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    top:100px;
+    left:350px;
+}
+#encabezado {
+    margin: 30px 0;
+}
+.submenu {
+    position: relative;
+}
+.submenu #carrito {
+    display: none;
+}
+.submenu:hover #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+
+    top: 100%;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    min-height: 400px;
+    min-width: 300px;
+}
+.vacio {
+    padding: 10px;
+    background-color: crimson;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}
+.contenido-hero {
+    margin-top: 80px;
+    color: white;
+}
+.contenido-hero form {
+    position: relative;
+    margin-bottom: 0;
+}
+.contenido-hero form #buscador {
+    height: 50px;
+    margin-bottom: 0;
+}
+.contenido-hero form .submit-buscador {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    padding: 0;
+    display: block;
+    text-indent: -9999px;
+    width: 50px;
+    background-image: url(../images/lupa.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    border: none;
+}
+.barra {
+    padding: 20px 0;
+    background: #8f0202;
+    background: -moz-linear-gradient(left, #8f0202 0%, #e42626 100%);
+    background: -webkit-linear-gradient(left, #8f0202 0%, #e42626 100%);
+    background: linear-gradient(to rigth, #8f0202 0%, #e42626 100%)
+}
+
+.barra p {
+    margin: 0;
+    color: white;
+}
+.icono {
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 60px;
+    background-size: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+@media(min-width: 750px) {
+    .icono {
+        margin-bottom: 0;
+    }
+}
+.icono11 {
+    background-image: url(../images/icono11.png);
+}
+.icono2 {
+    background-image: url(../images/icono12.png);
+}
+.icono3 {
+    background-image: url(../images/icono13.png);
+}
+.icono4 {
+    background-image: url(../images/icono14.png);
+}
+.icono5 {
+    background-image: url(../images/icono15.png);
+}
+.icono6 {
+    background-image: url(../images/icono16.png);
+}
+.icono7 {
+    background-image: url(../images/icono17.png);
+}
+#lista-cursos .row {
+    margin-bottom: 20px;
+}
+.agregar-carrito {
+    margin: 10px 0;
+    background-color: #8f0202;
+    color: white;
+}
+.card {
+    text-align: center;
+    border: 1px solid #e1e1e1;
+    background: white;
+}
+@media (min-width: 550px) {
+    .card {
+        text-align: left;
+    }
+}
+.info-card {
+    padding: 10px 20px;
+}
+.info-card p, .card h4{
+    margin-bottom: 5px;
+}
+.info-card .precio {
+    text-decoration: line-through;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.info-card .precio span {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.text {font-size:20; font-family:verdana; color:#ebe1d3; text-decoration:none}
+.text:hover {font-size:30; font-family:verdana; color:#5c4b3e ; text-decoration:none}
