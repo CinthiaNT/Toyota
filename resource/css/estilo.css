@@ -94,3 +94,9 @@
   .sin_borde {
     border: none;
   }
+
+  .boton_inferior {
+    background-color: #B91414;
+    color: #ffffff;
+    border: none;
+  }

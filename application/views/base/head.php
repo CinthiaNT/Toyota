@@ -13,6 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link rel="stylesheet" href="<?= base_url(); ?>resource/css/skeleton.css">
         <link rel="stylesheet" href="<?= base_url(); ?>resource/css/custom.css">
         <link rel="stylesheet" href="<?= base_url(); ?>resource/css/estilo.css">
+        <!--<link rel="stylesheet" href="<?= base_url(); ?>resource/css/bootstrap.min.css">-->
         <!--<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">!-->
         <link href="<?= base_url(); ?>resource/images/favicon.PNG" rel="shortcut icon" type="image/vnd.microsoft.icon" />
     </head>
