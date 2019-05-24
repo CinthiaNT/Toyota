@@ -1,37 +1,38 @@
 <table id="tablaUsuario">
   <thead>
     <tr>
-      <th colspan="3">Atividades do projeto</th>
-    </tr>
-    <tr>
-      <th>#</th>
-      <th colspan="2">Atividade</th>
+      <th width="6%" class="centrado">Id Cliente</th>
+      <th width="14%" class="centrado">Razón Social</th>
+      <th width="14%" class="centrado">Régimen Fiscal</th>
+      <th width="14%" class="centrado">RFC</th>
+      <th width="14%" class="centrado">Teléfono</th>
+      <th width="14%" class="centrado">Dirección</th>
+      <th width="14%" class="centrado">Correo</th>
+      <th width="5%" class="centrado">Editar</th>
+      <th width="5%" class="centrado">Eliminar</th>  
     </tr>
   </thead>
   <tbody>
+    <?php
+      foreach ($clients as $key) {
+    ?>
     <tr>
-      <td>1</td>
-      <td>Atualizar página da equipe</td>
-      <td>
-        <i class="material-icons button edit">edit</i>
-        <i class="material-icons button delete">delete</i>
-      </td>
+      <th><?= $key['id']?></th>
+      <td><?= $key['razon_social']?></td>
+      <td><?= $key['regimen_fiscal']?></td>
+      <td><?= $key['rfc']?></td>
+      <td><?= $key['telefono']?></td>
+      <td><?= $key['direccion']?></td>
+      <td><?= $key['correo']?></td>
+
+      <td><form action = '<?= base_url('')?>Cliente/editar' method = 'post'><button type="submit" class="" value="<?=$key['id']?>" id="editar" name="editar"><img class="icono_chico" src="<?= base_url(); ?>resource/images/edit.png"></button></form></td>
+
+      <td><form action = '<?= base_url('')?>Cliente/eliminar' method = 'post'><button type="submit" class="" value="<?=$key['id']?>" id="eliminar" name="eliminar" onclick="return confirmacion('¿Está seguro que desea eliminar al cliente?')"><img class="icono_chico" src="<?= base_url(); ?>resource/images/delete.png"></button></form></td>
     </tr>
-    <tr>
-      <td>2</td>
-      <td>Design da nova marca</td>
-      <td>
-        <i class="material-icons button edit">edit</i>
-        <i class="material-icons button delete">delete</i>
-       </td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Encontrar desenvolvedor front-end</td>
-      <td>
-        <i class="material-icons button edit">edit</i>
-        <i class="material-icons button delete">delete</i>
-      </td>
-    </tr>
+    <?php
+      }
+    ?>
   </tbody>
 </table>
+
+<center><button class="fondo_rojo letra_blanca borde_negro" name="agregar" id="agregar" onclick="window.location='<?php echo base_url(); ?>Cliente/agregar'">Agregar</button></center>

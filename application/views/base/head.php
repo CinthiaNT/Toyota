@@ -20,8 +20,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <header id="header" class="header">    
         <div class="row">
             <div class="four columns">
-                <h1><span class="white">TOYOTA</span></h1>
+                <h1><img src="<?= base_url(); ?>resource/images/favicon.PNG"><span class="white">TOYOTA</span></h1>
             </div>
+        </div>
     </header>
     <div id="hero">
         <div class="container">

@@ -73,3 +73,24 @@
   .delete:hover {
     color: #dc2a2a;
   }
+
+  .centrado {
+     text-align: center;
+  }
+
+  .icono_chico {
+    width: 35px;
+    height: 35px;
+  }
+
+  .fondo_rojo {
+    background-color: #B91414;
+  }
+
+  .letra_blanca {
+    color: #ffffff;
+  }
+
+  .sin_borde {
+    border: none;
+  }
