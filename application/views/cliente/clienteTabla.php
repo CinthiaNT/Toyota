@@ -1,3 +1,5 @@
+<center><h1 class="letra_blanca">Clientes</h1></center>
+
 <table id="tablaUsuario">
   <thead>
     <tr>

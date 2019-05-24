@@ -1,3 +1,5 @@
+<center><h1 class="letra_blanca">Datos Cliente</h1></center>
+
 <form name="clientes" id="clientes" action="<?php echo base_url(); ?>Cliente/valor" method="post">
 	<div class="form-group">
       <label for="id"><strong>Id</strong></label>
