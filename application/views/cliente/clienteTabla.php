@@ -35,4 +35,4 @@
   </tbody>
 </table>
 
-<center><button class="fondo_rojo letra_blanca borde_negro" name="agregar" id="agregar" onclick="window.location='<?php echo base_url(); ?>Cliente/agregar'">Agregar</button></center>
+<center><button class="fondo_rojo letra_blanca sin_borde" name="agregar" id="agregar" onclick="window.location='<?php echo base_url(); ?>Cliente/agregar'">Agregar</button></center>
