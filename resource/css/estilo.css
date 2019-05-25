@@ -100,3 +100,12 @@
     color: #ffffff;
     border: none;
   }
+  img.pequeña{
+    width: 10px; height: 10px;
+  }
+  .encabezado{
+    text-align: center;
+    background-color: #4f4f4c;
+    color: #fff; 
+    border-radius: 5px;
+  }

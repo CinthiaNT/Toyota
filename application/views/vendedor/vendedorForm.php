@@ -40,132 +40,27 @@
 <body>
 	<div class="container-contact100">
 		<div class="wrap-contact100">
-			<form class="contact100-form validate-form" name="autos" id="autos" action="<?php echo base_url(); ?>Automovil/valor" method="post">
-				<p class="encabezado">A U T O M O V I L</p>
+			<form class="contact100-form validate-form" name="autos" id="autos" action="<?php echo base_url(); ?>Vendedor/valor" method="post">
+				<p class="encabezado">V E N D E D O R</p>
 				<div class="wrap-input100 validate-input bg1" data-validate="Please Type Your Name">
 					<span class="label-input100">Id *</span>
-					<input class="input100" type="text" name="id" placeholder="Id automovil" value="<?=$automovil[0]['id']?>">
+					<input class="input100" type="text" name="id" placeholder="Id vendedor" value="<?=$vendedor[0]['id']?>">
 				</div>
 
 				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
-					<span class="label-input100">Marca *</span>
-					<input class="input100" type="text" name="marca" placeholder="Toyota" value="<?=$automovil[0]['marca']?>">
+					<span class="label-input100">Nombre *</span>
+					<input class="input100" type="text" name="nombre" placeholder="Nombre(s)" value="<?=$vendedor[0]['nombre']?>">
 				</div>
-
-				<div class="wrap-input100 input100-select bg1 rs1-wrap-input100">
-					<span class="label-input100">Modelo *</span>
-					<div>
-						<select class="js-select2" name="modelo">
-							<option <?php if($automovil[0]['modelo'] == "Prius") echo "selected"?>>Prius</option>
-							<option <?php if($automovil[0]['modelo'] == "Yaris") echo "selected"?>>Yaris</option>
-							<option <?php if($automovil[0]['modelo'] == "Corolla") echo "selected"?>>Corolla</option>
-							<option <?php if($automovil[0]['modelo'] == "Camry") echo "selected"?>>Camry</option>
-						</select>
-						<div class="dropDownSelect2"></div>
-					</div>
-                </div>
                 <div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
-					<span class="label-input100">Precio *</span>
-					<input class="input100" type="text" name="precio" placeholder="$00.00" value="<?=$automovil[0]['precio']?>">
+					<span class="label-input100">Apellido *</span>
+					<input class="input100" type="text" name="apellidos" placeholder="Apellido(s)" value="<?=$vendedor[0]['apellidos']?>">
                 </div>
-                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
-					<span class="label-input100">No. Serie *</span>
-					<input class="input100" type="text" name="nserie" placeholder="10MNZ3457KGFS" value="<?=$automovil[0]['no_serie']?>">
+                <div class="wrap-input100 validate-input bg1">
+					<span class="label-input100">Correo electronico *</span>
+					<input class="input100" type="email" name="correo" placeholder="correo@domainname" value="<?=$vendedor[0]['correo']?>">
                 </div>
-                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
-					<span class="label-input100">Clave Vehicular *</span>
-					<input class="input100" type="text" name="clave" placeholder="10MNZ3457KGFS10" value="<?=$automovil[0]['clave_vehicular']?>">
-                </div>
-                <div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
-					<span class="label-input100">En inventario *</span>
-					<input class="input100" type="text" name="inventario" placeholder="Ej. 5 unidades" value="<?=$automovil[0]['no_inventario']?>">
-				</div>
-                <div class="wrap-input100 input100-select bg1">
-					<span class="label-input100">Tipo *</span>
-					<div>
-						<select class="js-select2" name="tipo">
-							<option <?php if($automovil[0]['tipo'] == "Hibrido") echo "selected"?>>Hibrido</option>
-							<option <?php if($automovil[0]['tipo'] == "SUV'S") echo "selected"?>>SUV'S</option>
-							<option <?php if($automovil[0]['tipo'] == "PickUp") echo "selected"?>>PickUp</option>
-							<option <?php if($automovil[0]['tipo'] == "Futuro") echo "selected"?>>Futuro</option>
-						</select>
-						<div class="dropDownSelect2"></div>
-					</div>
-                </div>
-				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
-					<span class="label-input100">Color exterior*</span>
-					<input class="input100" type="text" name="colorExt" placeholder="" value="<?=$automovil[0]['color_exterior']?>">
-				</div>
-				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
-					<span class="label-input100">Color interior*</span>
-					<input class="input100" type="text" name="colorInt" placeholder="" value="<?=$automovil[0]['color_interior']?>">
-				</div>
-				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
-					<span class="label-input100">No. Motor*</span>
-					<input class="input100" type="text" name="motor" placeholder="" value="<?=$automovil[0]['no_motor']?>">
-				</div>
-				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
-					<span class="label-input100">Tipo motor*</span>
-					<input class="input100" type="text" name="tipoMotor" placeholder="" value="<?=$automovil[0]['tipo_motor']?>">
-				</div>
-				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
-					<span class="label-input100">Procedencia*</span>
-					<input class="input100" type="text" name="procedencia" placeholder="" value="<?=$automovil[0]['procedencia']?>">
-				</div>
-				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
-					<span class="label-input100">No. Cilindros*</span>
-					<input class="input100" type="number" name="cilindros" placeholder="" value="<?=$automovil[0]['no_cilindros']?>">
-				</div>
-				<div class="wrap-input100 input100-select bg1 rs1-wrap-input100">
-					<span class="label-input100">Estado *</span>
-					<div>
-						<select class="js-select2" name="estado">
-							<option <?php if($automovil[0]['tipo'] == "Nuevo") echo "selected"?>>Nuevo</option>
-							<option <?php if($automovil[0]['tipo'] == "Seminuevo") echo "selected"?>>Seminuevo</option>
-						</select>
-						<div class="dropDownSelect2"></div>
-					</div>
-                </div>
-				<div class="wrap-input100 input100-select bg1 rs1-wrap-input100">
-					<span class="label-input100">Transmision *</span>
-					<div>
-						<select class="js-select2" name="transmision">
-							<option <?php if($automovil[0]['tipo'] == "T/M") echo "selected"?>>T/M</option>
-							<option <?php if($automovil[0]['tipo'] == "T/A") echo "selected"?>>T/A</option>
-						</select>
-						<div class="dropDownSelect2"></div>
-					</div>
-				</div>
-				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
-					<span class="label-input100">No. Puertas*</span>
-					<input class="input100" type="number" name="puertas" placeholder="" value="<?=$automovil[0]['puertas']?>">
-				</div>
-				<div class="wrap-input100 input100-select bg1 rs1-wrap-input100">
-					<span class="label-input100">Tipo de auto*</span>
-					<div>
-						<select class="js-select2" name="tipoAuto">
-							<option <?php if($automovil[0]['tipo'] == "Pasajeros") echo "selected"?>>Pasajeros</option>
-							<option <?php if($automovil[0]['tipo'] == "Carga") echo "selected"?>>Carga</option>
-						</select>
-						<div class="dropDownSelect2"></div>
-					</div>
-				</div>
-				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
-					<span class="label-input100">Capacidad*</span>
-					<input class="input100" type="text" name="capacidad" placeholder="" value="<?=$automovil[0]['capacidad']?>">
-				</div>
-				<div class="wrap-input100 input100-select bg1 rs1-wrap-input100">
-					<span class="label-input100">Combustible *</span>
-					<div>
-						<select class="js-select2" name="combustible">
-							<option <?php if($automovil[0]['tipo'] == "Gasolina") echo "selected"?>>Gasolina</option>
-							<option <?php if($automovil[0]['tipo'] == "Diesel") echo "selected"?>>Diesel</option>
-						</select>
-						<div class="dropDownSelect2"></div>
-					</div>
-				</div>
 				<div class="container-contact100-form-btn">
-					<button class="contact100-form-btn" value="1" name="1"<?php if($automovil[0]['id'] == ''){echo 'hidden';}?>>
+					<button class="contact100-form-btn" value="1" name="1"<?php if($vendedor[0]['id'] == ''){echo 'hidden';}?>>
 						<span>
 							Modificar
 							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
@@ -173,7 +68,7 @@
 					</button>
 				</div>
 				<div class="container-contact100-form-btn">
-					<button class="contact100-form-btn" value="2" name="2"<?php if($automovil[0]['id'] != ''){echo 'hidden';}?>>
+					<button class="contact100-form-btn" value="2" name="2"<?php if($vendedor[0]['id'] != ''){echo 'hidden';}?>>
 						<span>
 							Guardar
 							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>

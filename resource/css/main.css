@@ -177,8 +177,8 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #e6e6e6;
-  
+  background: #393939;
+
 }
 
 .wrap-contact100 {
@@ -322,7 +322,7 @@ textarea.input100 {
 }
 
 .contact100-form-btn:hover {
-  background-color: #00ad5f;
+  background-color: #B91414;
 }
 
 .contact100-form-btn:hover i {
