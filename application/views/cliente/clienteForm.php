@@ -3,7 +3,7 @@
 <form name="clientes" id="clientes" action="<?php echo base_url(); ?>Cliente/valor" method="post">
 	<div class="form-group">
       <label for="id"><strong>Id</strong></label>
-      <input type="number" name="id" class="form-control" placeholder="" value="<?=$cliente[0]['id']?>" readonly>
+      <input type="number" name="id" class="form-control" placeholder="Id Cliente" value="<?=$cliente[0]['id']?>" readonly>
     </div>
 	<div class="form-row">
     	<div class="form-group col-md-4">
