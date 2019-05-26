@@ -97,3 +97,13 @@ CREATE TABLE Cobranza(
 	primary key (id),
 	foreign key (id_compra) references CompraCotizacion(id) on delete cascade on update cascade
 );
+
+CREATE TABLE Amortizacion(
+	numero 		int 		not null,
+	fecha 		varchar(30),
+	concepto 	varchar(50),
+	abono		varchar(30),
+	interes 	varchar(30),
+	mensualidad varchar(30),
+	saldo 		varchar(30)
+);
