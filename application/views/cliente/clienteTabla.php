@@ -1,7 +1,8 @@
-<center><h1 class="letra_blanca">Clientes</h1></center>
-
 <table id="tablaUsuario">
-  <thead>
+<thead>
+    <tr style="width=100%">
+      <th colspan="11">C L I E N T E</th>
+    </tr>
     <tr>
       <th width="6%" class="centrado">Id Cliente</th>
       <th width="14%" class="centrado">Razón Social</th>
@@ -11,7 +12,7 @@
       <th width="14%" class="centrado">Dirección</th>
       <th width="14%" class="centrado">Correo</th>
       <th width="5%" class="centrado">Editar</th>
-      <th width="5%" class="centrado">Eliminar</th>  
+      <th width="5%" class="centrado">Eliminar</th>   
     </tr>
   </thead>
   <tbody>
@@ -27,9 +28,9 @@
       <td><?= $key['direccion']?></td>
       <td><?= $key['correo']?></td>
 
-      <td><form action = '<?= base_url('')?>Cliente/editar' method = 'post'><button type="submit" class="" value="<?=$key['id']?>" id="editar" name="editar"><img class="icono_chico" src="<?= base_url(); ?>resource/images/edit.png"></button></form></td>
+      <td><form action = '<?= base_url('')?>Cliente/editar' method = 'post'><button type="submit" class="sin_borde" value="<?=$key['id']?>" id="editar" name="editar"><img class="icono_chico" src="<?= base_url(); ?>resource/images/edit.png"></button></form></td>
 
-      <td><form action = '<?= base_url('')?>Cliente/eliminar' method = 'post'><button type="submit" class="" value="<?=$key['id']?>" id="eliminar" name="eliminar" onclick="return confirmacion('¿Está seguro que desea eliminar al cliente?')"><img class="icono_chico" src="<?= base_url(); ?>resource/images/delete.png"></button></form></td>
+      <td><form action = '<?= base_url('')?>Cliente/eliminar' method = 'post'><button type="submit" class="sin_borde" value="<?=$key['id']?>" id="eliminar" name="eliminar" onclick="return confirmacion('¿Está seguro que desea eliminar al cliente?')"><img class="icono_chico" src="<?= base_url(); ?>resource/images/delete.png"></button></form></td>
     </tr>
     <?php
       }

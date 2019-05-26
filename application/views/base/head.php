@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <a class="text" href="<?= base_url('')?>Cotizacion">Cotizaciones</a>
                 </div>
                 <div class="two columns icono icono6">
-                    <a class="text" href="<?= base_url('')?>Login">Ventas</a>
+                    <a class="text" href="<?= base_url('')?>Ventas">Ventas</a>
                 </div>
                 
             </div>
