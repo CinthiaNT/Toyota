@@ -43,5 +43,5 @@
 </table>
 <center>
   <button class="boton_inferior" name="agregar" id="agregar" onclick="window.location='<?php echo base_url(); ?>Automovil/agregar'">Agregar</button>
-  <button class="boton_inferior" name="agregar" id="agregar" onclick="window.location='<?php echo base_url(); ?>Automovil/reporte'">Ver listado de automoviles</button>
+  <button class="boton_inferior" name="reporte" id="reporte" onclick="window.location='<?php echo base_url(); ?>Automovil/reporte'">Ver listado de automoviles</button>
 </center>

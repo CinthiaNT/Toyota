@@ -20,7 +20,13 @@ class Ventas extends CI_Controller {
         $this->load->view('ventas/ventasTabla', $data);
         $this->load->view('base/js');
         $this->load->view('base/findoc'); 
-	}
+    }
+    public function reporte()
+    {
+        $id = $this->input->post('reporte');
+        $data['venta'] = $this->ventas_model->reporte($id);
+        $this->load->view('ventas/factura',$data);
+    }
     public function eliminar(){
         $id = $this->input->post('eliminar');
         $this->ventas_model->delete($id);

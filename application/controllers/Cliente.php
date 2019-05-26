@@ -20,7 +20,13 @@ class Cliente extends CI_Controller {
         $this->load->view('cliente/clienteTabla', $data);
         $this->load->view('base/js');
         $this->load->view('base/findoc'); 
-	}
+    }
+    public function reporte()
+    {
+        $clientes = $this->cliente_model->getClients();
+        $data['clientes'] = $clientes;
+        $this->load->view('cliente/clienteReporte',$data);
+    }
 
     public function agregar(){
         $dato ['cliente']= array(Array('id' => '',

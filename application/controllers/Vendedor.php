@@ -20,7 +20,13 @@ class Vendedor extends CI_Controller {
         $this->load->view('vendedor/vendedorTabla', $data);
         $this->load->view('base/js');
         $this->load->view('base/findoc'); 
-	}
+    }
+    public function reporte()
+    {
+        $vendedores = $this->vendedor_model->getVendedores();
+        $data['vendedores'] = $vendedores;
+        $this->load->view('vendedor/vendedorReporte',$data);
+    }
 
     public function agregar(){
         $dato ['vendedor']= array(Array('id' => '',

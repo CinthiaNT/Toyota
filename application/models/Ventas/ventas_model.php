@@ -20,4 +20,16 @@ class ventas_model extends CI_Model{
     function delete($id){
         $resultado = $this->db->query("delete from compracotizacion where id = '".$id."'");
     }
+    function reporte($id)
+    {
+        echo '<script>alert('.$id.')</script>';
+        $result = $this->db->query("select *, cc.id as idCV from compracotizacion as cc 
+                                                            join vendedor as ven on cc.id_vendedor = ven.id
+                                                            join cliente as cli on cc.id_cliente = cli.id
+                                                            join automovil as auto on cc.id_automovil = auto.id
+                                                            where cc.id = '".$id."';");
+                                                           
+        return  $result->result_array();
+        echo '<script>alert('.$result.')</script>';
+    }
 }
