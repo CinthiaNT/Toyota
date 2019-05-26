@@ -100,4 +100,13 @@ class cotizacion_model extends CI_Model{
     function delete($id){
         $resultado = $this->db->query("delete from compracotizacion where id = '".$id."'");
     }
+
+    function getExistencia($id_automovil){
+        $result = $this->db->query("select no_inventario from automovil where id = ".$id_automovil.";");
+        return $result->result_array();
+    }
+
+    function disminuirExistencia($id_automovil,$cantidad){
+        $result = $this->db->query("update automovil set no_inventario = ".$cantidad." where id = ".$id_automovil.";");
+    }
 }

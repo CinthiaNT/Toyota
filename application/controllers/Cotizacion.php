@@ -82,6 +82,7 @@ class Cotizacion extends CI_Controller {
     	$interes = $this->input->post('interes');
     	$mensualidad = $this->input->post('mensualidad_con_interes');
     	$id = $this->input->post('id');
+    	$id_automovil = $this->input->post('id_automovil');
 
     	$datos  = array(
             'id' =>  $this->input->post('id'),    
@@ -109,9 +110,18 @@ class Cotizacion extends CI_Controller {
         	echo '<script language="javascript">alert("Cotización actualizada exitosamente");</script>';
         }else if($oculto == '2'){
         	//Realizar venta
-        	$this->cotizacion_model->realizarVenta($id);
-        	echo '<script language="javascript">alert("Venta realizada exitosamente");</script>';
-        	redirect(base_url().'Cotizacion', 'refresh');
+        	$existencia = $this->cotizacion_model->getExistencia($id_automovil);
+        	$cantidad = $existencia[0]['no_inventario'];
+        	if($cantidad > 0){
+        		$this->cotizacion_model->realizarVenta($id);
+        		$cantidad -= 1;
+        		$this->cotizacion_model->disminuirExistencia($id_automovil,$cantidad);
+        		echo '<script language="javascript">alert("Venta realizada exitosamente");</script>';
+        		redirect(base_url().'Ventas', 'refresh');
+        	}else {
+        		echo '<script language="javascript">alert("¡NO HAY EXISTENCIA DEL AUTOMÓVIL SOLICITADO!");</script>';
+        		redirect(base_url().'Cotizacion', 'refresh');
+        	}
         }else if($oculto == '3') {
         	//Guardar
         	$this->cotizacion_model->insertCotizacion($datos);
