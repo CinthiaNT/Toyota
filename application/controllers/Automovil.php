@@ -20,6 +20,12 @@ class Automovil extends CI_Controller {
         $this->load->view('automovil/automovilTabla',$data);
         $this->load->view('base/js');
     }
+    public function reporte()
+    {
+        $autos = $this->automovil_model->getAutos();
+        $data['autos'] = $autos;
+        $this->load->view('automovil/automovilReporte',$data);
+    }
 
     public function agregar(){
         $dato ['automovil']= array(Array('id' => '',

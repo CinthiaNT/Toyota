@@ -10,7 +10,7 @@ class automovil_model extends CI_Model {
         $this->load->database();
     }
     function getAutos() {
-        $result = $this->db->query("select * from automovil;");
+        $result = $this->db->query("select * from automovil");
         return $result->result_array();    
     }
     function obtenerValue($id){
