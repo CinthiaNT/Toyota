@@ -20,7 +20,13 @@ class Cobranza extends CI_Controller {
         $this->load->view('cobranza/cobranzaTabla', $data);
         $this->load->view('base/js');
         $this->load->view('base/findoc');
-	}
+    }
+    public function reporte()
+    {
+        $id = $this->input->post('reporte');
+        $data['cobranza'] = $this->cobranza_model->reporte($id);
+        $this->load->view('cobranza/cobranzaReporte',$data);
+    }
 
 	public function agregar(){
 		$id_compra = $this->input->post('agregar');

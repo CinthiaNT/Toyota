@@ -15,6 +15,13 @@ class cobranza_model extends CI_Model{
         														where cob.id_compra = ".$id_compra.";");       
         return $resultado->result_array();
     }
+    function reporte($idCob){
+        $resultado = $this->db->query("select *, cob.id as idCob, cob.fecha as fechaCob from cobranza as cob
+                                        join compracotizacion as cc on cob.id_compra = cc.id
+                                        join cliente as cl on cc.id_cliente = cl.id
+                                        where cob.id = ".$idCob.";");       
+        return $resultado->result_array();
+    }
 
     function getDatosVenta($id_compra){
         $resultado = $this->db->query("select * from compracotizacion where id = ".$id_compra.";");       

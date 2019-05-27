@@ -1,9 +1,4 @@
-<div class="">
-    <a class="text" href="<?= base_url('')?>Reporte/vendedor">Mejor vendedor toyota 2019</a>
-</div>
-<div class="">
-    <a class="text" href="<?= base_url('')?>Reporte/cliente">Mejor cliente toyota 2019</a>
-</div>
-<div class="">
-    <a class="text" href="<?= base_url('')?>Reporte/auto">Auto mas vendido 2019</a>
-</div>
+  <br>
+    <button style="margin-left: 100px;" class="sin_borde" onclick="window.location='<?php echo base_url(); ?>Reporte/vendedor'"><img class="" src="<?= base_url(); ?>resource/images/reporteVendedor.png"></button>
+    <button style="margin-left: 20px;" class="sin_borde" onclick="window.location='<?php echo base_url(); ?>Reporte/cliente'"><img class="" src="<?= base_url(); ?>resource/images/reporteCliente.png"></button>
+    <button style="margin-left: 20px;" class="sin_borde" onclick="window.location='<?php echo base_url(); ?>Reporte/auto'"><img class="" src="<?= base_url(); ?>resource/images/reporteAutomovil.png"></button>
