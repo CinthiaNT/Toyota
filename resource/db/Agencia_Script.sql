@@ -10,7 +10,7 @@ CREATE TABLE Vendedor(
 	primary key (id)
 );
 
-INSERT INTO Vendedor (id, nombre, apellidos, correo) VALUES
+INSERT INTO `vendedor` (`id`, `nombre`, `apellidos`, `correo`) VALUES
 (1, 'Rafael', 'Paniagua Soto', 'rpaniagua@gmail.com'),
 (2, 'Hernan', 'Gonzalez Alcaraz', 'hgonzalez@gmail.com'),
 (3, 'Paulina', 'Padilla Guerrero', 'ppadilla@gmail.com');
@@ -26,11 +26,11 @@ CREATE TABLE Cliente(
 	primary key (id)
 );
 
-INSERT INTO Cliente (id, razon_social, regimen_fiscal, rfc, telefono, direccion, correo) VALUES
-(1, 'Cinthia Nava Torres', 'PF', 'NATJ970623', '477 5892389', 'Topografos #111', 'cnava@gmail.com'),
-(2, 'GreenSol', 'PM', 'GRSL120505', '477 3547812', 'Real de los castillos #220', 'greensol@gmail.com'),
-(3, 'Mariscos El Muelle', 'PM', 'MUMA050401', '477 6874123', 'Av. Rivera de la presa #23', 'mmuelle@gmail.com'),
-(4, 'Tacos los Gallos', 'PFAE', 'LUTA070809', '477 5247896', 'Delta #320', 'x@x');
+INSERT INTO `cliente` (`id`, `razon_social`, `regimen_fiscal`, `rfc`, `telefono`, `direccion`, `correo`) VALUES
+(1, 'Cinthia Nava Torres', 'PF', 'NATJ970623', '477 589238', 'Topografos #111', 'cnava@gmail.com'),
+(2, 'GreenSol', 'PM', 'GRSL120505', '477 354781', 'Real de los castillos #220', 'greensol@gmail.com'),
+(3, 'Mariscos El Muelle', 'PM', 'MUMA050401', '477 687412', 'Av. Rivera de la presa #23', 'mmuelle@gmail.com'),
+(4, 'Tacos los Gallos', 'PFAE', 'LUTA070809', '477 524789', 'Delta #320', 'x@x');
 
 CREATE TABLE Automovil(
 	id 				int 		not null auto_increment,
@@ -58,8 +58,9 @@ CREATE TABLE Automovil(
 );
 
 INSERT INTO `automovil` (`id`, `marca`, `modelo`, `precio`, `no_serie`, `clave_vehicular`, `no_inventario`, `tipo`, `color_exterior`, `color_interior`, `no_motor`, `tipo_motor`, `procedencia`, `no_cilindros`, `estado_vehiculo`, `transmision`, `puertas`, `tipo_auto`, `capacidad`, `combustible`, `imagen`) VALUES
-(1, 'Toyota', 'Prius', 500000.00, '123456789', '987654', '9', 'PickUp', 'Azul', 'Beige', '-665667', 'Nuevo', 'Nacional', 4, 'Nuevo', 'T/M', 5, 'Pasajeros', '6', 'Gasolina', 'prius.png'),
-(2, 'Toyota', 'Camry', 9999999.00, '159357852', '879543', '0', 'Hibrido', 'Blanco', 'Gris', '-5407445655411411122', 'Nuevo', 'Extranjera', 6, 'Nuevo', 'T/A', 7, 'Pasajeros', '8', 'Gasolina', 'camry.png');
+(1, 'Toyota', 'Prius', 500000.00, '123456789', '987654', '9', 'PickUp', 'Azul', 'Beige', '665667', 'Nuevo', 'Nacional', 4, 'Nuevo', 'T/M', 5, 'Pasajeros', '6', 'Gasolina', 0x70726975732e706e67),
+(2, 'Toyota', 'Camry', 9999999.00, '159357852', '879543', '5', 'Hibrido', 'Blanco', 'Gris', '5407445', 'Nuevo', 'Extranjera', 6, 'Nuevo', 'T/M', 7, 'Pasajeros', '8', 'Gasolina', 0x63616d72792e706e67),
+(3, 'Toyota', 'Hilux', 650000.00, '1237894', '52FGDD6G5DS', '14', 'PickUp', 'Blanco', 'Negro', '120365', 'HidrÃ¡ulico', 'Nacional', 8, 'Nuevo', 'T/M', 5, 'Pasajeros', '6', 'Gasolina', 0x68696c75782e6a7067);
 
 CREATE TABLE CompraCotizacion(
 	id 			 			int 		 not null auto_increment,
@@ -87,10 +88,11 @@ CREATE TABLE CompraCotizacion(
 );
 
 INSERT INTO `compracotizacion` (`id`, `fecha`, `estatus`, `descuento`, `comision`, `precio_neto`, `enganche`, `tasa`, `plazo`, `precio_final`, `mensualidad_sin_interes`, `interes`, `mensualidad_con_interes`, `mensualidades_pagadas`, `id_vendedor`, `id_cliente`, `id_automovil`) VALUES
-(null, '2019-01-31', 'venta', 1.00, 1.00, 500000, 1.00, 1.00, 80, 495000.00, 6187.50, 412.50, 6600.00, 61, 2, 2, 2),
-(null, '2019-01-01', 'venta', 1.00, 1.00, 500000, 1.00, 1.00, 1, 495000.00, 495000.00, 412.50, 495412.50, 1, 1, 2, 2),
-(null, '2019-01-01', 'cotizacion', 1.00, 1.00, 500000, 1.00, 1.00, 1, 495000.00, 495000.00, 412.50, 495412.50, 0, 1, 1, 1),
-(null, '2019-05-05', 'venta', 1.00, 1.00, 500000, 1.00, 1.00, 1, 495000.00, 495000.00, 412.50, 495412.50, 0, 1, 3, 1);
+(1, '2019-01-31', 'venta', 1.00, 1.00, 500000, 1.00, 1.00, 80, 495000.00, 6187.50, 412.50, 6600.00, 3, 2, 2, 2),
+(2, '2019-01-01', 'venta', 1.00, 1.00, 500000, 1.00, 1.00, 1, 495000.00, 495000.00, 412.50, 495412.50, 1, 1, 2, 2),
+(3, '2019-05-31', 'venta', 1.00, 1.00, 650000, 1.00, 1.00, 18, 643500.00, 35750.00, 536.25, 36286.25, 4, 1, 1, 3),
+(4, '2019-05-05', 'venta', 1.00, 1.00, 500000, 1.00, 1.00, 1, 495000.00, 495000.00, 412.50, 495412.50, 1, 1, 3, 1),
+(5, '2019-05-28', 'cotizacion', 10000.00, 5000.00, 645000, 19.00, 18.00, 17, 522450.00, 30732.35, 7836.75, 38569.10, 0, 1, 1, 3);
 
 CREATE TABLE Cobranza(
 	id 			  		   int  not null auto_increment,
@@ -103,9 +105,9 @@ CREATE TABLE Cobranza(
 
 INSERT INTO `cobranza` (`id`, `fecha`, `mensualidades_abonadas`, `id_compra`) VALUES
 (1, '2019-05-26', 3, 1),
-(2, '2019-05-26', 3, 2),
+(2, '2019-05-26', 1, 2),
 (3, '0001-01-01', 4, 3),
-(4, '2019-05-27', 2, 4);
+(4, '2019-05-27', 1, 4);
 
 CREATE TABLE Amortizacion(
 	numero 		int 		not null,
