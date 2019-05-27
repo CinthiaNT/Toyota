@@ -20,7 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <header id="header" class="header">    
         <div class="row">
             <div class="four columns">
-                <h1><img  src="<?= base_url(); ?>resource/images/favicon.png"><span class="white">TOYOTA</span></h1>
+                <h1><span class="white">TOYOTA</span></h1>
             </div>
         </div>
     </header>
@@ -31,25 +31,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </div>
     <div class="barra">
-        <div class="container">
+        <div class="container1">
             <div class="row">
-                <div class="two columns icono icono11">
+                <div class="one columns icono icono11">
                     <a class="text" href="<?= base_url('')?>Catalog">Inicio</a>
                 </div>
-                <div class="two columns icono icono4">
+                <div class="one columns icono icono4">
                     <a class="text" href="<?= base_url('')?>Automovil">Automoviles</a>
                 </div>
-                <div class="two columns icono icono5">
+                <div class="one columns icono icono5">
                     <a class="text" href="<?= base_url('')?>Vendedor">Vendedores</a>
                 </div>
-                <div class="two columns icono icono3">
+                <div class="one columns icono icono3">
                     <a class="text" href="<?= base_url('')?>Cliente">Clientes</a>
                 </div>
-                <div class="two columns icono icono7">
+                <div class="one columns icono icono7">
                     <a class="text" href="<?= base_url('')?>Cotizacion">Cotizaciones</a>
                 </div>
-                <div class="two columns icono icono6">
+                <div class="one columns icono icono6">
                     <a class="text" href="<?= base_url('')?>Ventas">Ventas</a>
+                </div>
+                <div class="one columns icono icono8">
+                    <a class="text" href="<?= base_url('')?>Reporte">Reportes</a>
                 </div>
                 
             </div>
