@@ -132,7 +132,7 @@
 					</div>
                 </div>
 				<div class="wrap-input100 input100-select bg1 rs1-wrap-input100">
-					<span class="label-input100">Transmision *</span>
+					<span class="label-input100">Transmisión *</span>
 					<div>
 						<select class="js-select2" name="transmision">
 							<option <?php if($automovil[0]['tipo'] == "T/M") echo "selected"?>>T/M</option>

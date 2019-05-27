@@ -56,7 +56,7 @@
 					<input class="input100" type="text" name="apellidos" placeholder="Apellido(s)" value="<?=$vendedor[0]['apellidos']?>">
                 </div>
                 <div class="wrap-input100 validate-input bg1">
-					<span class="label-input100">Correo electronico *</span>
+					<span class="label-input100">Correo electrónico *</span>
 					<input class="input100" type="email" name="correo" placeholder="correo@domainname" value="<?=$vendedor[0]['correo']?>">
                 </div>
 				<div class="container-contact100-form-btn">

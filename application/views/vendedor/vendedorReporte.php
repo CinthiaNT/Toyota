@@ -14,7 +14,7 @@ class PDF extends FPDF
       // Movernos a la derecha
       $this->Cell(80);
       // Título
-      $this->Cell(30,10,'List de vendedores',0,0,'C');
+      $this->Cell(30,10,'Lista de vendedores',0,0,'C');
       // Salto de línea
       $this->Ln(20);
   }

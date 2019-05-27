@@ -1,7 +1,7 @@
 <table id="tablaUsuario">
   <thead>
     <tr style="width=100%">
-      <th colspan="11">C O T I Z A C I O N</th>
+      <th colspan="11">C O T I Z A C I Ó N</th>
     </tr>
     <tr>
       <th width="10%" class="centrado">#</th>

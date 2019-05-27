@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <a class="text" href="<?= base_url('')?>Catalog">Inicio</a>
                 </div>
                 <div class="one columns icono icono4">
-                    <a class="text" href="<?= base_url('')?>Automovil">Automoviles</a>
+                    <a class="text" href="<?= base_url('')?>Automovil">Automóviles</a>
                 </div>
                 <div class="one columns icono icono5">
                     <a class="text" href="<?= base_url('')?>Vendedor">Vendedores</a>
