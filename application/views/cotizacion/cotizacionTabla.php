@@ -33,9 +33,9 @@
       <td><?= $key['nombre'].' '.$key['apellidos']?></td>
       <td><?= $key['razon_social']?></td>
 
-      <td><form action = '<?= base_url('')?>Cotizacion/editar' method = 'post'><button type="submit" class="" value="<?=$key['idCC']?>" id="editar" name="editar"><img class="icono_chico" src="<?= base_url(); ?>resource/images/edit.png"></button></form></td>
+      <td><form action = '<?= base_url('')?>Cotizacion/editar' method = 'post'><button type="submit" class="sin_borde" value="<?=$key['idCC']?>" id="editar" name="editar"><img class="icono_chico" src="<?= base_url(); ?>resource/images/edit.png"></button></form></td>
 
-      <td><form action = '<?= base_url('')?>Cotizacion/eliminar' method = 'post'><button type="submit" class="" value="<?=$key['idCC']?>" id="eliminar" name="eliminar" onclick="return confirmacion('¿Está seguro que desea eliminar la cotización?')"><img class="icono_chico" src="<?= base_url(); ?>resource/images/delete.png"></button></form></td>
+      <td><form action = '<?= base_url('')?>Cotizacion/eliminar' method = 'post'><button type="submit" class="sin_borde" value="<?=$key['idCC']?>" id="eliminar" name="eliminar" onclick="return confirmacion('¿Está seguro que desea eliminar la cotización?')"><img class="icono_chico" src="<?= base_url(); ?>resource/images/delete.png"></button></form></td>
     </tr>
     <?php
       }
