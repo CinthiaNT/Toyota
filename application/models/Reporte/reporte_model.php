@@ -10,10 +10,10 @@ class reporte_model extends CI_Model{
     }
 
     function mejorVendedor() {
-        $result = $this->db->query("select max(contador) as ventas, name, ap from(select v.nombre as name, v.apellidos as ap, c.estatus as e,
+        $result = $this->db->query("select max(contador) as ventas, nom, ap from(select v.nombre as nom, v.apellidos as ap, c.estatus as e,
                                     count(c.id_vendedor) as contador 
-                                    from compracotizacion as c join vendedor v on c.id_vendedor = v.id 
-                                    group by id_vendedor) as t where e = 'venta';");
+                                    from compracotizacion as c join vendedor v on c.id_vendedor = v.id
+                                    where c.estatus = 'venta' group by id_vendedor) as t;");
         return $result->result_array();    
     }
     function mejorCliente() {
