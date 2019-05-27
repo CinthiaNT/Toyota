@@ -81,6 +81,10 @@
     width: 35px;
     height: 35px;
   }
+  .icono_mediano {
+    width: 100px;
+    height: 100px;
+  }
 
   .fondo_rojo {
     background-color: #B91414;

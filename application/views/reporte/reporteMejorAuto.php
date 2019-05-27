@@ -43,7 +43,7 @@ function Contenido($auto){
     $this->Cell(190,10,$auto[0]['modelo'].' obtiene el titulo del auto mas vendido 2019','',0,'C',FALSE);
     $this->Ln();
     $this->Cell(190,15,'Con un total de '.$auto[0]['cantidad'].' unidades vendidas','',0,'C',FALSE);
-    $this->Image('resource/images/prius.png',1,50);
+    $this->Image('resource/images/'.$auto[0]['img'],22,65);
    
 }
 }

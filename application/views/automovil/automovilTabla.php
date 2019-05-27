@@ -1,6 +1,7 @@
+<div>
 <table id="tablaUsuario">
   <thead>
-    <tr style="width=100%">
+    <tr style="width=80%">
       <th colspan="11">A U T O M O V I L</th>
     </tr>
     <tr>
@@ -43,5 +44,6 @@
 </table>
 <center>
   <button class="boton_inferior" name="agregar" id="agregar" onclick="window.location='<?php echo base_url(); ?>Automovil/agregar'">Agregar</button>
-  <button class="boton_inferior" name="reporte" id="reporte" onclick="window.location='<?php echo base_url(); ?>Automovil/reporte'">Ver listado de automoviles</button>
+  <button class="boton_inferior" name="reporte" id="reporte" onclick="window.location='<?php echo base_url(); ?>Automovil/reporte'" target="_blank">Ver listado de automoviles</button>
 </center>
+    </div>

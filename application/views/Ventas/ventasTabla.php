@@ -39,7 +39,7 @@
       
 
       <td><form action = '<?= base_url('')?>Cobranza/index?id_compra=<?=$key['idCV']?>' method = 'post'><button type="submit" class="sin_borde" value="<?=$key['idCV']?>" id="cobranza" name="cobranza"><img class="icono_chico" src="<?= base_url(); ?>resource/images/pagar.png"></button></form></td>
-      <td><form action = '<?= base_url('')?>Ventas/reporte' method = 'post'><button type="submit" class="sin_borde" value="<?=$key['idCV']?>" id="reporte" name="reporte"><img class="icono_chico" src="<?= base_url(); ?>resource/images/factura.png"></button></form></td>
+      <td><form action = '<?= base_url('')?>Ventas/reporte' method = 'post' target="_blank"><button type="submit" class="sin_borde" value="<?=$key['idCV']?>" id="reporte" name="reporte"><img class="icono_chico" src="<?= base_url(); ?>resource/images/factura.png"></button></form></td>
       <td>
         <form action = '<?= base_url('')?>Ventas/eliminar' method = 'post'>
           <button type="submit" class="sin_borde" value="<?=$key['idCV']?>" 

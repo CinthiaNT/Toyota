@@ -24,8 +24,8 @@ class reporte_model extends CI_Model{
         return $result->result_array();    
     }
     function mejorAuto(){
-    $result = $this->db->query("select m as modelo, max(contar) as cantidad from
-                                (select a.modelo as m, count(a.modelo) as contar 
+    $result = $this->db->query("select m as modelo, max(contar) as cantidad, img from
+                                (select a.modelo as m, count(a.modelo) as contar, a.imagen as img
                                 from compracotizacion as c join automovil as a 
                                 on c.id_automovil = a.id where c.estatus = 'venta' 
                                 group by a.modelo) as t;");

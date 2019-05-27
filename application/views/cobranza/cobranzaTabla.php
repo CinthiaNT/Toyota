@@ -32,7 +32,7 @@
       <td>$<?= ($key['mensualidades_abonadas']*$key['mensualidad_con_interes'])?></td>
       <td><?= $key['id_compra']?></td>
 
-      <td><form action = '<?= base_url('')?>Cobranza/reporte' method = 'post'><button type="submit" class="sin_borde" value="<?=$key['idCob']?>" id="reporte" name="reporte"><img class="icono_chico" src="<?= base_url(); ?>resource/images/factura.png"></button></form></td>     
+      <td><form action = '<?= base_url('')?>Cobranza/reporte' method = 'post' target="_blank"><button type="submit" class="sin_borde" value="<?=$key['idCob']?>" id="reporte" name="reporte"><img class="icono_chico" src="<?= base_url(); ?>resource/images/factura.png"></button></form></td>     
     </tr>
     <?php
       }      

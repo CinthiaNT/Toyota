@@ -35,7 +35,7 @@
 
 <center>
   <button class="boton_inferior" name="agregar" id="agregar" onclick="window.location='<?php echo base_url(); ?>Vendedor/agregar'">Agregar</button>
-  <button class="boton_inferior" name="reporte" id="reporte" onclick="window.location='<?php echo base_url(); ?>Vendedor/reporte'">Ver listado de vendedores</button>
+  <button class="boton_inferior" name="reporte" id="reporte" onclick="window.location='<?php echo base_url(); ?>Vendedor/reporte'" target="_blank">Ver listado de vendedores</button>
 </center>
 
 

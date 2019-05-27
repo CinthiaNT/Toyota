@@ -60,6 +60,11 @@
 							<option <?php if($automovil[0]['modelo'] == "Yaris") echo "selected"?>>Yaris</option>
 							<option <?php if($automovil[0]['modelo'] == "Corolla") echo "selected"?>>Corolla</option>
 							<option <?php if($automovil[0]['modelo'] == "Camry") echo "selected"?>>Camry</option>
+							<option <?php if($automovil[0]['modelo'] == "C-HR") echo "selected"?>>C-HR</option>
+							<option <?php if($automovil[0]['modelo'] == "Hilux") echo "selected"?>>Hilux</option>
+							<option <?php if($automovil[0]['modelo'] == "Tacoma") echo "selected"?>>Tacoma</option>
+							<option <?php if($automovil[0]['modelo'] == "Mirai") echo "selected"?>>Mirai</option>
+							
 						</select>
 						<div class="dropDownSelect2"></div>
 					</div>
