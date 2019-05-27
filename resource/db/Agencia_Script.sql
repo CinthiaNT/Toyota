@@ -54,12 +54,13 @@ CREATE TABLE Automovil(
 	tipo_auto		varchar(20), -- pasajero/carga
 	capacidad		varchar(20),
 	combustible		varchar(20),
+	imagen 			longblob,
 	primary key (id)
 );
 
-INSERT INTO Automovil (id, marca, modelo, precio, no_serie, clave_vehicular, no_inventario, tipo, color_exterior, color_interior, no_motor, tipo_motor, procedencia, no_cilindros, estado_vehiculo, transmision, puertas, tipo_auto, capacidad, combustible) VALUES
-(1, 'Toyota', 'Corolla 2019', 500000.00, '123456789', '987654', '03-009', 'Sedan', 'Azul Oscuro', 'Negro', '123456-789123', 'Nuevo', 'Nacional', 4, 'Nuevo', 'Estándar', 5, 'Pasajeros', '5', 'Gasolina'),
-(2, 'Toyota', 'Highlander 2018', 750999.00, '159357852', '879543', '54-999', 'Van', 'Blanco', 'Gris', '412-965-4854', 'X', 'Extranjera', 6, 'Seminuevo', 'Automática', 7, 'Pasajeros', '8', 'Gasolina');
+INSERT INTO `automovil` (`id`, `marca`, `modelo`, `precio`, `no_serie`, `clave_vehicular`, `no_inventario`, `tipo`, `color_exterior`, `color_interior`, `no_motor`, `tipo_motor`, `procedencia`, `no_cilindros`, `estado_vehiculo`, `transmision`, `puertas`, `tipo_auto`, `capacidad`, `combustible`) VALUES
+(1, 'Toyota', 'Prius', 500000.00, '123456789', '987654', '9', 'PickUp', 'Azul Oscuro', 'Negro', '-665667', 'Nuevo', 'Nacional', 4, 'Nuevo', 'T/M', 5, 'Pasajeros', '6', 'Gasolina', null),
+(2, 'Toyota', 'Camry', 9999999.00, '159357852', '879543', '0', 'Hibrido', 'Blanco', 'Gris', '-5407445655411411122', 'X', 'Extranjera', 6, 'Nuevo', 'T/M', 7, 'Pasajeros', '8', 'Gasolina', null);
 
 CREATE TABLE CompraCotizacion(
 	id 			 			int 		 not null auto_increment,
@@ -86,8 +87,10 @@ CREATE TABLE CompraCotizacion(
 	foreign key (id_automovil) references Automovil(id) on delete cascade on update cascade
 );
 
-INSERT INTO CompraCotizacion (id, fecha, estatus, descuento, comision, precio_neto, enganche, tasa, plazo, precio_final, mensualidad_sin_interes, interes, mensualidad_con_interes, mensualidades_pagadas, id_vendedor, id_cliente, id_automovil) VALUES
-(1, '2019-05-25', 'cotizacion', 10000.00, 5000.00, 495000, 10.00, 18.00, 24, 445500.00, 18562.50, 6682.50, 25245.00, 0, 1, 2, 1);
+INSERT INTO `compracotizacion` (`id`, `fecha`, `estatus`, `descuento`, `comision`, `precio_neto`, `enganche`, `tasa`, `plazo`, `precio_final`, `mensualidad_sin_interes`, `interes`, `mensualidad_con_interes`, `mensualidades_pagadas`, `id_vendedor`, `id_cliente`, `id_automovil`) VALUES
+(84, '0001-01-31', 'venta', 1.00, 1.00, 500000, 1.00, 1.00, 80, 495000.00, 6187.50, 412.50, 6600.00, 61, 2, 2, 1),
+(85, '0001-01-01', 'venta', 1.00, 1.00, 500000, 1.00, 1.00, 1, 495000.00, 495000.00, 412.50, 495412.50, 1, 1, 1, 1),
+(86, '0001-01-01', 'cotizacion', 1.00, 1.00, 500000, 1.00, 1.00, 1, 495000.00, 495000.00, 412.50, 495412.50, 0, 1, 1, 1);
 
 CREATE TABLE Cobranza(
 	id 			  		   int  not null auto_increment,
@@ -97,6 +100,12 @@ CREATE TABLE Cobranza(
 	primary key (id),
 	foreign key (id_compra) references CompraCotizacion(id) on delete cascade on update cascade
 );
+
+INSERT INTO `cobranza` (`id`, `fecha`, `mensualidades_abonadas`, `id_compra`) VALUES
+(1, '2019-05-26', 8, 84),
+(2, '2019-05-26', 50, 84),
+(3, '0001-01-01', 3, 84),
+(4, '2019-05-27', 1, 85);
 
 CREATE TABLE Amortizacion(
 	numero 		int 		not null,

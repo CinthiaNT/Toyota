@@ -20,7 +20,7 @@ class automovil_model extends CI_Model {
     function insert($dato){
         $result = $this->db->query("insert into automovil values(null,'".$dato['marca']."','".$dato['modelo']."',".$dato['precio'].",'".$dato['no_serie']."','".$dato['clave_vehicular']."',
         '".$dato['no_inventario']."','".$dato['tipo']."','".$dato['color_exterior']."','".$dato['color_interior']."','".$dato['no_motor']."','".$dato['tipo_motor']."','".$dato['procedencia']."',
-        ".$dato['no_cilindros'].",'".$dato['estado_vehiculo']."','".$dato['transmision']."',".$dato['puertas'].",'".$dato['tipo_auto']."','".$dato['capacidad']."','".$dato['combustible']."');");
+        ".$dato['no_cilindros'].",'".$dato['estado_vehiculo']."','".$dato['transmision']."',".$dato['puertas'].",'".$dato['tipo_auto']."','".$dato['capacidad']."','".$dato['combustible']."','".$dato['imagen']."');");
     }
     function delete($id){
         $resultado = $this->db->query("delete from automovil where id = '".$id."'");
@@ -30,7 +30,7 @@ class automovil_model extends CI_Model {
         clave_vehicular='".$dato['clave_vehicular']."',no_inventario='".$dato['no_inventario']."',tipo='".$dato['tipo']."',color_exterior='".$dato['color_exterior']."',
         color_interior='".$dato['color_interior']."',no_motor=".$dato['no_motor'].",tipo_motor='".$dato['tipo_motor']."',procedencia='".$dato['procedencia']."',
         no_cilindros = ".$dato['no_cilindros'].", estado_vehiculo = '".$dato['estado_vehiculo']."',
-        transmision='".$dato['transmision']."',puertas=".$dato['puertas'].",tipo_auto='".$dato['tipo_auto']."',capacidad = '".$dato['capacidad']."',combustible='".$dato['combustible']."'
+        transmision='".$dato['transmision']."',puertas=".$dato['puertas'].",tipo_auto='".$dato['tipo_auto']."',capacidad = '".$dato['capacidad']."',combustible='".$dato['combustible']."',imagen='".$dato['imagen']."'
         where id = ".$dato['id'].";");
     }
 } 

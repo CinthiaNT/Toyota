@@ -164,6 +164,12 @@
 						<div class="dropDownSelect2"></div>
 					</div>
 				</div>
+
+				<div class="wrap-input100 validate-input bg1">
+					<span class="label-input100">Imagen*</span>
+					<input class="input100" type="file" name="imagen" placeholder="Imagen" value="<?=$automovil[0]['imagen']?>">
+				</div>
+
 				<div class="container-contact100-form-btn">
 					<button class="contact100-form-btn" value="1" name="1"<?php if($automovil[0]['id'] == ''){echo 'hidden';}?>>
 						<span>

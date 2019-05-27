@@ -47,7 +47,8 @@ class Automovil extends CI_Controller {
                                         'puertas'=>'',
                                         'tipo_auto'=>'',
                                         'capacidad'=>'',
-                                        'combustible'=>''
+                                        'combustible'=>'',
+                                        'imagen'=>''
                                     ));
         $this->load->view('base/head');
         $this->load->view('automovil/automovilCrud',$dato);
@@ -88,7 +89,8 @@ class Automovil extends CI_Controller {
         'puertas'=>$this->input->post('puertas'),
         'tipo_auto'=>$this->input->post('tipoAuto'),
         'capacidad'=>$this->input->post('capacidad'),
-        'combustible'=>$this->input->post('combustible'));
+        'combustible'=>$this->input->post('combustible'),
+        'imagen'=>$this->input->post('imagen'));
            if($actualizar == '1'){ 
                 $this->automovil_model->update($dato);
                 echo '<script language="javascript">alert("Automovil actualizado exitosamente");</script>';
