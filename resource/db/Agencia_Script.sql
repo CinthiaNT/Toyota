@@ -58,7 +58,7 @@ CREATE TABLE Automovil(
 	primary key (id)
 );
 
-INSERT INTO `automovil` (`id`, `marca`, `modelo`, `precio`, `no_serie`, `clave_vehicular`, `no_inventario`, `tipo`, `color_exterior`, `color_interior`, `no_motor`, `tipo_motor`, `procedencia`, `no_cilindros`, `estado_vehiculo`, `transmision`, `puertas`, `tipo_auto`, `capacidad`, `combustible`) VALUES
+INSERT INTO `automovil` (`id`, `marca`, `modelo`, `precio`, `no_serie`, `clave_vehicular`, `no_inventario`, `tipo`, `color_exterior`, `color_interior`, `no_motor`, `tipo_motor`, `procedencia`, `no_cilindros`, `estado_vehiculo`, `transmision`, `puertas`, `tipo_auto`, `capacidad`, `combustible`, `imagen`) VALUES
 (1, 'Toyota', 'Prius', 500000.00, '123456789', '987654', '9', 'PickUp', 'Azul Oscuro', 'Negro', '-665667', 'Nuevo', 'Nacional', 4, 'Nuevo', 'T/M', 5, 'Pasajeros', '6', 'Gasolina', null),
 (2, 'Toyota', 'Camry', 9999999.00, '159357852', '879543', '0', 'Hibrido', 'Blanco', 'Gris', '-5407445655411411122', 'X', 'Extranjera', 6, 'Nuevo', 'T/M', 7, 'Pasajeros', '8', 'Gasolina', null);
 
