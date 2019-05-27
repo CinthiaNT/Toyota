@@ -23,6 +23,8 @@ class Cotizacion extends CI_Controller {
 	}
 
 	public function agregar(){
+        $id_automovil = $this->input->post('id');
+
         $dato ['cotizacion']= array(Array('id' => '',
         								'fecha' => '',
                                         'estatus' => '',
@@ -39,7 +41,7 @@ class Cotizacion extends CI_Controller {
                                     	'mensualidades_pagadas'=>'',
                                         'id_vendedor'=>'',
                                         'id_cliente' => '',
-                                        'id_automovil'=> ''));
+                                        'id_automovil'=> $id_automovil));
 
         $dato['vendedores'] = $this->cotizacion_model->getVendedores();
         $dato['numVendedores'] = $this->cotizacion_model->getNumVendedores();

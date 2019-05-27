@@ -6,7 +6,8 @@
     <tr style="width=100%">
       <?php $plazo = $datosVenta[0]['plazo'];
             $meses = $datosVenta[0]['mensualidades_pagadas'];
-            $faltantes = $plazo - $meses; ?>
+            $faltantes = $plazo - $meses;
+            $sumatoria = 0; ?>
       <th colspan="7">Mensualidades Faltantes = <?= $faltantes?></th>
     </tr>
     <tr>
@@ -23,20 +24,28 @@
     <br> 
     <?php    
       foreach ($cobranzas as $key) {
+        $abono = $key['mensualidades_abonadas'];
+        $monto = $key['mensualidad_con_interes'];
+        $pago = ($abono*$monto);
     ?>  
       <tr>
-      <th><?= $key['idCob']?></th>
-      <td><?= $key['fechaCob']?></td>
-      <td><?= $key['mensualidades_abonadas']?></td>
-      <td>$<?= $key['mensualidad_con_interes']?></td>
-      <td>$<?= ($key['mensualidades_abonadas']*$key['mensualidad_con_interes'])?></td>
-      <td><?= $key['id_compra']?></td>
+      <th class="centrado"><?= $key['idCob']?></th>
+      <td class="centrado"><?= $key['fechaCob']?></td>
+      <td class="centrado"><?= $key['mensualidades_abonadas']?></td>
+      <td class="centrado">$<?= $key['mensualidad_con_interes']?></td>
+      <td class="centrado">$<?= $pago?></td>
+      <td class="centrado"><?= $key['id_compra']?></td>
 
       <td><form action = '<?= base_url('')?>Cobranza/reporte' method = 'post' target="_blank"><button type="submit" class="sin_borde" value="<?=$key['idCob']?>" id="reporte" name="reporte"><img class="icono_chico" src="<?= base_url(); ?>resource/images/factura.png"></button></form></td>     
     </tr>
     <?php
+      $sumatoria += $pago;
       }      
-    ?> 
+    ?>
+    <tr>
+      <th colspan="4" style="text-align: right;">Total Abonado</th>
+      <th class="centrado">$<?= $sumatoria?></th>
+    </tr>
   </tbody>
 </table>
 
